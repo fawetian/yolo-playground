@@ -1,0 +1,46 @@
+{
+    // Python 解释器配置 - 使用 conda yolo 环境
+    "python.defaultInterpreterPath": "/opt/anaconda3/envs/yolo/bin/python",
+    
+    // 终端默认激活 conda 环境
+    "python.terminal.activateEnvironment": true,
+    "python.condaPath": "conda",
+    
+    // 格式化
+    "python.formatting.provider": "none",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    
+    // Linting
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    
+    // 测试
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+    
+    // 终端配置
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    
+    // 文件关联
+    "files.associations": {
+        "*.yaml": "yaml",
+        "*.yml": "yaml"
+    },
+    
+    // 排除文件
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/runs": false,
+        "**/outputs": false
+    }
+}
+

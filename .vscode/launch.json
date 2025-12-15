@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${fileDirname}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Python: 当前文件 (带参数)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${fileDirname}",
+            "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "OpenCV: 图像读取示例",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/01_opencv_basics/01_image_io/01_read_image.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${workspaceFolder}/01_opencv_basics/01_image_io",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "YOLO: 快速入门",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/04_yolo_basics/01_intro/01_yolo_quickstart.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${workspaceFolder}/04_yolo_basics/01_intro",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "YOLO: 实时检测",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/06_integration/01_opencv_yolo/realtime_detection.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${workspaceFolder}/06_integration/01_opencv_yolo",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}
+
