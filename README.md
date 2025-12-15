@@ -228,6 +228,26 @@ results = model("image.jpg", device="mps")  # Apple Silicon GPU
 
 ---
 
+## 📦 模型管理
+
+所有 YOLO 模型统一存储在 `models/yolo/` 目录：
+- ✅ 优先从本地 `models/yolo/` 目录加载
+- ✅ 如果不存在，自动下载并保存到该目录
+- ✅ 后续运行无需重新下载
+
+```python
+from utils.model_loader import load_yolo_model
+
+# 自动管理模型下载和加载
+model = load_yolo_model("yolo11n.pt")
+```
+
+查看已下载的模型：
+```python
+from utils.model_loader import list_local_models
+models = list_local_models()
+```
+
 ## 🚀 快速开始 (macOS + Conda)
 
 ### 前置准备

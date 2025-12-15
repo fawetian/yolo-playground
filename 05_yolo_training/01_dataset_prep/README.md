@@ -53,12 +53,31 @@ names:
 
 ## 推荐标注工具
 
-### LabelMe (推荐)
+### X-AnyLabeling (推荐 ⭐)
+
+现代化的标注工具，支持 **AI 辅助标注**：
+
 ```bash
 conda activate yolo
-pip install labelme
-labelme
+
+# 安装
+pip install x-anylabeling
+
+# 启动
+x-anylabeling
 ```
+
+**特点**：
+- 🤖 内置 AI 模型，支持自动标注
+- 📦 直接导出 YOLO 格式
+- 🎯 支持检测、分割、姿态等多种任务
+- 🖥️ 现代化 UI，操作流畅
+
+**使用流程**：
+1. 启动 `x-anylabeling`
+2. 打开图像文件夹
+3. 使用 AI 模型自动标注（或手动标注）
+4. 导出为 YOLO 格式
 
 ### 在线工具
 - CVAT: https://www.cvat.ai/

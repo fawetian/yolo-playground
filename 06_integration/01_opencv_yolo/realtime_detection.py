@@ -14,9 +14,14 @@ macOS 说明:
 
 import cv2
 import numpy as np
-from ultralytics import YOLO
 import torch
 import time
+import sys
+from pathlib import Path
+
+# 添加项目根目录到路径
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from utils.model_loader import load_yolo_model
 
 
 def get_device():
@@ -39,8 +44,9 @@ def main():
     device_names = {"mps": "Apple Silicon GPU", "cpu": "CPU", "0": "NVIDIA GPU"}
     print(f"💻 使用设备: {device_names.get(device, device)}")
     
-    # 加载模型 (选择较小的模型以保证速度)
-    model = YOLO("yolo11n.pt")
+    # 加载模型 (优先从本地 models/yolo/ 目录加载)
+    # 选择较小的模型以保证速度
+    model = load_yolo_model("yolo11n.pt")
     
     # ==========================================
     # 1. 初始化视频捕获

@@ -50,9 +50,10 @@ imageio-ffmpeg>=0.4.8
 # ==========================================
 # 标注工具 (可选)
 # ==========================================
-# labelimg 在 macOS 上可能有兼容性问题
-# 推荐使用 labelme 替代
-labelme>=5.0.0
+# X-AnyLabeling: 支持 AI 辅助标注的现代标注工具
+# 支持 YOLO 格式导出，内置多种 AI 模型
+# GitHub: https://github.com/CVHub520/X-AnyLabeling
+x-anylabeling>=2.0.0
 
 # ==========================================
 # 其他工具

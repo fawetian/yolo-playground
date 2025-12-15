@@ -12,9 +12,13 @@ macOS 说明:
 - 如果 MPS 内存不足，减小 batch 或使用 CPU
 """
 
-from ultralytics import YOLO
 from pathlib import Path
 import torch
+import sys
+
+# 添加项目根目录到路径
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from utils.model_loader import load_yolo_model
 
 
 def get_device():
@@ -57,9 +61,11 @@ def main():
     print("\n📦 加载预训练模型...")
     
     # 从预训练模型开始 (迁移学习)
-    model = YOLO("yolo11n.pt")
+    # 优先从本地 models/yolo/ 目录加载
+    model = load_yolo_model("yolo11n.pt")
     
     # 或者从头开始训练 (需要更多数据和时间)
+    # from ultralytics import YOLO
     # model = YOLO("yolo11n.yaml")
     
     # ==========================================

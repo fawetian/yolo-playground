@@ -15,10 +15,14 @@ macOS 说明:
 - Intel Mac 使用 CPU
 """
 
-from ultralytics import YOLO
 from pathlib import Path
 import urllib.request
 import torch
+import sys
+
+# 添加项目根目录到路径
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from utils.model_loader import load_yolo_model
 
 
 def get_device():
@@ -57,7 +61,8 @@ def main():
     # - yolo11x.pt: Extra-Large (最慢，精度最高)
     
     print("\n📦 加载模型...")
-    model = YOLO("yolo11n.pt")  # 自动下载模型
+    # 优先从本地 models/yolo/ 目录加载，如果没有则自动下载
+    model = load_yolo_model("yolo11n.pt")
     print("✅ 模型加载成功!")
     
     # ==========================================
@@ -91,7 +96,7 @@ def main():
     
     print("\n🔍 运行目标检测...")
     # 使用最佳设备进行推理
-    results = model(str(test_image), device=device)
+    results = model(str(test_image), conf=0.90, device=device)
     
     # results 是一个列表，每个元素对应一张输入图像
     result = results[0]
