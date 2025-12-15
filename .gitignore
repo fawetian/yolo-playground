@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# YOLO
+*.pt
+*.onnx
+*.engine
+*.torchscript
+runs/
+
+# Datasets (exclude large files)
+datasets/images/*
+!datasets/images/.gitkeep
+datasets/videos/*
+!datasets/videos/.gitkeep
+
+# Model weights
+models/yolo/*
+!models/yolo/.gitkeep
+models/custom/*
+!models/custom/.gitkeep
+
+# Outputs
+outputs/*
+!outputs/.gitkeep
+
+# Sample images generated during learning
+**/*.sample.jpg
+**/outputs/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
