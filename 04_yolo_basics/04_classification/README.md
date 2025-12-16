@@ -76,8 +76,18 @@ for result in results:
     print(f"{img_path}: {top_class} ({confidence:.2%})")
 ```
 
-## 待创建文件
+## 文件列表
 
-- `01_classification_basic.py` - 分类基础
-- `02_batch_classification.py` - 批量分类
+| 文件 | 内容 |
+|-----|------|
+| `01_classification_basic.py` | 分类基础 - 模型加载、Top-K 预测、概率分析 |
+| `02_batch_classification.py` | 批量分类 - 批量处理、统计分析、结果导出 |
+
+## 运行
+
+```bash
+conda activate yolo
+python 01_classification_basic.py
+python 02_batch_classification.py
+```
 

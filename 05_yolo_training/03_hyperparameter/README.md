@@ -79,8 +79,19 @@ result = model.tune(
 - 增加 warmup 轮数
 - 减小 batch size
 
+## 示例脚本
+
+| 脚本 | 功能 |
+|-----|-----|
+| `01_custom_cfg.py` | 使用自定义超参数 (学习率、优化器等) 进行训练 |
+
+## 运行
+
+```bash
+python 01_custom_cfg.py
+```
+
 ## 待创建文件
 
 - `01_hyperparameter_guide.py` - 超参数指南
 - `02_auto_tuning.py` - 自动调优示例
-

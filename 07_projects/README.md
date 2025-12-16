@@ -7,17 +7,19 @@
 ## 项目列表
 
 | 项目 | 难度 | 预计时间 | 技术点 |
-|-----|------|---------|--------|
-| `project_01_face_detection/` | ⭐⭐ | 3 天 | 人脸检测、人脸识别 |
-| `project_02_vehicle_counting/` | ⭐⭐⭐ | 5 天 | 目标追踪、越线计数 |
-| `project_03_ocr_pipeline/` | ⭐⭐⭐ | 5 天 | 文字检测、OCR |
-| `project_04_anomaly_detection/` | ⭐⭐⭐⭐ | 7 天 | 异常检测、告警系统 |
+| 目录 | 脚本 | 说明 |
+|-----|-----|-----|
+| `project_01_face_detection` | `face_detect_app.py` | 人脸/头部检测，隐私马赛克与特效 |
+| `project_02_vehicle_counting` | `roi_counter.py` | 基于 ROI 线的车辆流量统计 |
+| `project_03_ocr_pipeline` | `ocr_pipeline.py` | 检测 -> 裁剪 -> OCR 文字识别 (需 Tesseract) |
+| `project_04_anomaly_detection` | `simple_anomaly.py` | 基于区域规则的异常/闯入检测 |
 
-## 建议顺序
+## 运行方式
 
-1. **入门**: 从 `project_01_face_detection` 开始
-2. **进阶**: 完成 `project_02_vehicle_counting`
-3. **挑战**: 尝试 `project_03_ocr_pipeline` 或 `project_04_anomaly_detection`
+进入对应目录运行脚本即可，例如：
+```bash
+python project_01_face_detection/face_detect_app.py
+```
 
 ## 项目结构建议
 

@@ -94,9 +94,20 @@ for person_kpts in kpts:
         print("检测到举手!")
 ```
 
-## 待创建文件
+## 文件列表
 
-- `01_pose_basic.py` - 姿态估计基础
-- `02_skeleton_drawing.py` - 骨架绘制
-- `03_action_recognition.py` - 动作识别
+| 文件 | 内容 |
+|-----|------|
+| `01_pose_basic.py` | 姿态估计基础 - 模型加载、关键点数据解析 |
+| `02_skeleton_drawing.py` | 骨架绘制 - 多种绘制样式、自定义可视化 |
+| `03_action_recognition.py` | 动作识别 - 动作检测、角度计算、对称性分析 |
+
+## 运行
+
+```bash
+conda activate yolo
+python 01_pose_basic.py
+python 02_skeleton_drawing.py
+python 03_action_recognition.py
+```
 

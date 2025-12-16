@@ -94,9 +94,16 @@ model.export(format="onnx", half=True)
 model = YOLO("yolo11n.pt")  # nano 版本最小
 ```
 
-## 待创建文件
+## 示例脚本
 
-- `01_export_onnx.py` - ONNX 导出
-- `02_export_coreml.py` - CoreML 导出
-- `03_model_optimization.py` - 模型优化
+| 脚本 | 功能 |
+|-----|-----|
+| `01_export_formats.py` | 导出模型为 ONNX 和 CoreML 格式 |
 
+## 运行
+
+```bash
+python 01_export_formats.py
+```
+
+> **注意**: CoreML 导出需要 `coremltools` 库：`pip install coremltools`

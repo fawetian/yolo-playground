@@ -78,9 +78,20 @@ rgba = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
 rgba[:, :, 3] = (person_mask * 255).astype(np.uint8)
 ```
 
-## 待创建文件
+## 文件列表
 
-- `01_segmentation_basic.py` - 分割基础
-- `02_mask_processing.py` - 掩码处理
-- `03_background_removal.py` - 背景移除
+| 文件 | 内容 |
+|-----|------|
+| `01_segmentation_basic.py` | 分割基础 - 模型加载、推理、结果解析 |
+| `02_mask_processing.py` | 掩码处理 - 尺寸对齐、目标提取、轮廓检测 |
+| `03_background_removal.py` | 背景移除 - 透明背景、背景替换、边缘羽化 |
+
+## 运行
+
+```bash
+conda activate yolo
+python 01_segmentation_basic.py
+python 02_mask_processing.py
+python 03_background_removal.py
+```
 

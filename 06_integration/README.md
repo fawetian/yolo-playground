@@ -27,13 +27,29 @@
 摄像头/视频 → OpenCV 读取 → YOLO 检测 → 后处理 → 可视化/保存
 ```
 
-## 运行示例
+## 示例脚本
 
+| 脚本 | 目录 | 功能 |
+|-----|-----|-----|
+| `01_cv2_yolo_basic.py` | `01_opencv_yolo` | OpenCV 读取与 YOLO 推理基础集成 |
+| `01_webcam_detection.py` | `02_realtime_detection` | 实时摄像头检测与 FPS 优化 |
+| `01_video_processing.py` | `03_video_analysis` | 视频文件逐帧处理与保存 |
+
+## 运行
+
+**基础集成:**
 ```bash
-conda activate yolo
+python 01_opencv_yolo/01_cv2_yolo_basic.py
+```
 
-# 实时检测（需要摄像头）
-python 01_opencv_yolo/realtime_detection.py
+**实时摄像头:** (按 'q' 退出)
+```bash
+python 02_realtime_detection/01_webcam_detection.py
+```
+
+**视频处理:** (确保 datasets/videos 下有视频)
+```bash
+python 03_video_analysis/01_video_processing.py
 ```
 
 ## macOS 注意事项

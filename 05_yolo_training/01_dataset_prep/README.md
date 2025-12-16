@@ -83,6 +83,26 @@ x-anylabeling
 - CVAT: https://www.cvat.ai/
 - Roboflow: https://roboflow.com/
 
+## 示例脚本
+
+| 脚本 | 功能 |
+|-----|-----|
+| `01_create_sample_dataset.py` | 下载 coco8 数据集并生成配置文件 |
+| `02_check_dataset.py` | 验证数据集完整性并可视化标签 |
+
+## 运行
+
+1. 首先运行数据集创建脚本：
+```bash
+python 01_create_sample_dataset.py
+```
+这将下载数据集并生成 `coco8_local.yaml` 配置文件。
+
+2. 然后可以验证数据集：
+```bash
+python 02_check_dataset.py
+```
+
 ## 文件列表
 
 | 文件 | 内容 |
